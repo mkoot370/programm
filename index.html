@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pica</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body class="text-center">
+    <div id="cart">
+      <h2>
+        <a href="./pay/pay.html">
+          <img
+            src="./pictures/card.png"
+            alt="Cart"
+            width="24px"
+            height="24px"
+          />
+          Groza
+        </a>
+      </h2>
+      <ul id="cart-items" class="list-unstyled"></ul>
+      <p>Total: <span id="total-price">0</span> eiro</p>
+    </div>
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column" id="bg">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading" id="name">Picu darbnica</h1>
+        <p class="lead" id="podpis">
+          Vieta, kur baudīt gardākās picas no svaigiem un kvalitatīviem
+          produktiem.<br />
+          Mūsu izvēlē ir plaša picas izvēle, kas apmierinās katra pica mīļotāja
+          vēlmes. Apmeklējiet mūs, lai izbaudītu siltas, gardas picas un
+          patīkamu atmosfēru!
+        </p>
+      </main>
+      <footer class="mastfoot mt-auto" id="number">
+        <div class="inner">
+          <p>phone number: +371 38748180</p>
+          <p>email: pica@gmail.com</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./pictures/pepperoni.jpeg"
+                class="card-img-top"
+                alt="Pepperoni"
+              />
+              <div class="card-body">
+                <h1 class="card-text">Pepperoni</h1>
+                <p class="card-text">
+                  Pikanta pepperoni desa ar tomātu mērci un sieru, kas sniedz
+                  lielisku un piesātinātu garšu, ideāli piemērota asāku ēdienu
+                  cienītājiem.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">7 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./pictures/margarita.jpg"
+                class="card-img-top"
+                alt="Margarita"
+              />
+              <div class="card-body">
+                <h1 class="card-text">Margarita</h1>
+                <p class="card-text">
+                  Klasiska pica ar tomātu mērci, mozzarella sieru un baziliku.
+                  Vienkārša, bet garšīga izvēle, kas nekad neiznāk no modes.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">8 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./pictures/chikenPizza.jpg"
+                class="card-img-top"
+                alt="Chiken"
+              />
+              <div class="card-body">
+                <h1 class="card-text">Vistas</h1>
+                <p class="card-text">
+                  Pica ar vistas gaļu, tomātu mērci un sieru, papildināta ar
+                  dārzeņiem. Viegls un gards ēdiens tiem, kas meklē alternatīvu
+                  klasiskajai gaļai.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">7.50 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./pictures/pizza.avif"
+                class="card-img-top"
+                alt="Cream"
+              />
+              <div class="card-body">
+                <h1 class="card-text">Krējuma</h1>
+                <p class="card-text">
+                  Neparasta pica ar krēmveida mērci, kas aizstāj tomātu mērci,
+                  radot maigu un oriģinālu garšu. Ideāli piemērota jauniem garšu
+                  piedzīvojumiem.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./pictures/tuna.jpg" class="card-img-top" alt="Tuna" />
+              <div class="card-body">
+                <h1 class="card-text">Tuncis</h1>
+                <p class="card-text">
+                  Pica ar tunzivīm, tomātu mērci un sieru, kas apmierinās jūras
+                  velšu cienītājus ar tās unikālo un viegli sāļo garšu.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">7 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./pictures/black-olives.jpg"
+                class="card-img-top"
+                alt="Olives"
+              />
+              <div class="card-body">
+                <h1 class="card-text">Olīvas</h1>
+                <p class="card-text">
+                  Pica ar melnajām olīvēm, tomātu mērci un sieru. Ideāla izvēle
+                  vienkāršiem un garšīgiem ēdieniem ar maigu jūras velšu
+                  pieskārienu.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      class="pizza-quantity"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary add-to-cart"
+                    >
+                      Pievienot
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">8 eiro</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
