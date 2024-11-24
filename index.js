@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
         cart[itemName] = { price: itemPrice, quantity: quantity };
       }
 
-      renderCart();
-
       totalPrice += itemPrice * quantity;
       totalPriceElement.textContent = totalPrice.toFixed(2);
+      renderCart();
     });
   });
 
@@ -40,17 +39,39 @@ document.addEventListener("DOMContentLoaded", () => {
       ).toFixed(2)} eiro`;
       listItem.style.cursor = "pointer";
 
-      listItem.addEventListener("click", () => {
-        if (cart[itemName].quantity > 1) {
-          cart[itemName].quantity -= 1;
-          totalPrice -= price;
-        } else {
-          delete cart[itemName];
-          totalPrice -= price * quantity;
-        }
+      let timer = null;
 
-        totalPriceElement.textContent = totalPrice.toFixed(2);
-        renderCart();
+      listItem.addEventListener("click", () => {
+        if (!timer) {
+          if (cart[itemName].quantity > 1) {
+            cart[itemName].quantity -= 1;
+            totalPrice -= price;
+          } else {
+            delete cart[itemName];
+            totalPrice -= price * quantity;
+          }
+
+          totalPriceElement.textContent = totalPrice.toFixed(2);
+          renderCart();
+        }
+      });
+
+      listItem.addEventListener("mousedown", (event) => {
+        if (event.button === 0) {
+          timer = setTimeout(() => {
+            const totalItemPrice = price * quantity;
+            totalPrice -= totalItemPrice;
+            delete cart[itemName];
+
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+            renderCart();
+          }, 400);
+        }
+      });
+
+      listItem.addEventListener("mouseup", () => {
+        clearTimeout(timer);
+        timer = null;
       });
 
       cartItems.appendChild(listItem);
